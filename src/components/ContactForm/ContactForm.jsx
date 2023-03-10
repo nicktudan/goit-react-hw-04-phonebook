@@ -16,12 +16,6 @@ const initialValues = {
 }
 
 export const ContactForm = ({ onSubmit }) => {
-    // const handleSubmit = (value, {resetForm}) => {
-    //     console.log(value);
-    //     // onSubmit({ ...value, id: nanoid(), });
-    //     // this.props.onSubmit(this.state);
-    //     resetForm();
-    // }
 
     return (
     <Formik 
