@@ -13,7 +13,7 @@ export default function App () {
   const [filter, setFilter] = useState('');
 
   useEffect(() => {
-    window.localStorage.getItem('contacts', JSON.stringify(contacts))
+    window.localStorage.setItem('contacts', JSON.stringify(contacts))
   }, [contacts]);
 
   const addContact = ({ name, number }) => {
@@ -50,7 +50,7 @@ export default function App () {
   };
 
   const deleteContact = id => {
-    setContacts(contacts.filter(contact => contact.id !== id));
+    setContacts(prevState => prevState.filter(contact => contact.id !== id));
   };
 
     return (
